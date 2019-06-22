@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <title>annotate</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <textarea id="input-textarea"></textarea>
-    <div id="cursor-count"></div>
+    <nav>annotate</nav>
+    <div class="container-main">
+      <div class="container-reader">
+        <textarea 
+          readonly
+          spellcheck="false"
+          id="input-textarea">
+        </textarea>
+      </div>
+      <div class="container-selector">
+        <input type="file" name="client-file" id="get-files" multiple />
+        <ul id="fileList"></ul>
+      </div>
+      <div class="container-annotate">
+        <div id="cursor-count"></div>
+      </div>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>
